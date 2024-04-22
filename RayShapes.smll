@@ -1,0 +1,21 @@
+
+using RaySmll::RayCore
+using RaySmll::RayColor
+
+type RayShapes = "rShapes"
+
+fun raylib_shapes(rl: Raylib): RayShapes => {
+  val shapes = null of RayShapes
+  java {
+    "shapes = rl.shapes;"
+  }
+  shapes
+}
+
+fun raylib_shapes_draw_circle(rs: RayShapes, x: Int, y: Int, rad: Int, color: RayColor): Unit => {
+  java {
+  "rs.DrawCircle(x.intValue(), y.intValue(), rad.intValue(), color);"
+  }
+  ()
+}
+

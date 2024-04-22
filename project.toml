@@ -1,0 +1,16 @@
+
+[project]
+name = "RaySmll"
+version = "0.0.1"
+authors = ["Hexaredecimal"]
+edition = "2024"
+
+[libs]
+RaylibJ = "https://github.com/CreedVI/Raylib-J/releases/download/v0.5/Raylib-J.jar"
+
+[imports]
+Raylib = "com.raylib.java.Raylib"
+Core = "com.raylib.java.core.*"
+Text = "com.raylib.java.text.*"
+Shapes = "com.raylib.java.shapes.*"
+

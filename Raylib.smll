@@ -1,0 +1,9 @@
+
+type Raylib = "Raylib"
+fun init_raylib(): Raylib => {
+  val n = null of Raylib
+  java {
+    "n = new Raylib();"
+  }
+  n
+}

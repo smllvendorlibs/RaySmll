@@ -1,0 +1,59 @@
+
+using RaySmll::Raylib
+using RaySmll::RayColor
+
+
+type RayCore = "rCore"
+fun raylib_core(rl: Raylib): RayCore => {
+  val core = null of RayCore
+  java {
+    "core = rl.core;"
+  }
+  core
+}
+
+fun raylib_core_set_target_fps(core: RayCore, fps: Int): Unit => {
+  java {
+    "core.SetTargetFPS(fps.intValue());"
+  }
+  ()
+}
+
+
+fun raylib_core_init_window(cr: RayCore, title: String, width: Int, height: Int): Unit => {
+  java {
+    "cr.InitWindow(width, height, title);"
+  }
+  ()
+}
+
+fun raylib_core_window_should_close(cr: RayCore): Bool => {
+  val cond = false
+  java {
+    "cond = cr.WindowShouldClose();"
+  }
+  cond
+}
+
+fun raylib_core_begin_drawing(cr: RayCore): Unit => {
+  java {
+    "cr.BeginDrawing();"
+  }
+  ()
+}
+
+
+fun raylib_core_end_drawing(cr: RayCore): Unit => {
+  java {
+    "cr.EndDrawing();"
+  }
+  ()
+}
+
+fun raylib_core_clear_backgroud(cr: RayCore, color: RayColor): Unit => {
+  java {
+    "cr.ClearBackground(color);"
+  }
+  ()
+}
+
