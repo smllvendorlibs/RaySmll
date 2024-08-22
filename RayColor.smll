@@ -1,7 +1,7 @@
 
 type RayColor = "Color"
 
-fun raycolor_white(): RayColor => {
+fn raycolor_white(): RayColor => {
   val white = null of RayColor
   java {
     "white = Color.WHITE;"
@@ -9,7 +9,7 @@ fun raycolor_white(): RayColor => {
   white
 }
 
-fun raycolor_darkgray(): RayColor => {
+fn raycolor_darkgray(): RayColor => {
   val gray = null of RayColor
   java {
     "gray = Color.DARKGRAY;"
@@ -17,11 +17,11 @@ fun raycolor_darkgray(): RayColor => {
   gray
 }
 
-fun raycolor_gold(): RayColor => {
+fn raycolor_gold(): RayColor => {
   val gold = null of RayColor
   java {
     "gold = Color.GOLD;"
-  }
+  } 
   gold
 }
 

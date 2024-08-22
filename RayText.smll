@@ -1,10 +1,10 @@
 
-using RaySmll::Raylib
-using RaySmll::RayColor
+import RaySmll::Raylib
+import RaySmll::RayColor
 
 type RayText = "rText"
 
-fun raylib_text(rl: Raylib): RayText => {
+fn raylib_text(rl: Raylib): RayText => {
   val text = null of RayText
   java {
     "text = rl.text;"
@@ -12,7 +12,7 @@ fun raylib_text(rl: Raylib): RayText => {
   text
 }
 
-fun raylib_text_draw(rt: RayText, txt: String, x: Int,  y: Int, fs: Int,  color: RayColor): Unit => {
+fn raylib_text_draw(rt: RayText, txt: String, x: Int,  y: Int, fs: Int,  color: RayColor): Unit => {
   java {
     "rt.DrawText(txt, x.intValue(), y.intValue(), fs.intValue(),  color);"
   }
